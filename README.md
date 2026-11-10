@@ -203,4 +203,4 @@ The project provides a foundation for developing more advanced packaging optimiz
 
 Project: BoxLogic – AI-Assisted Box Selection System
 
-Repository: 
+Repository: https://github.com/gnapika-18/BoxLogic-Management-System
