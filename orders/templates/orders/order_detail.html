@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Details</title>
+    <link rel="stylesheet" href="{% static 'orders/css/order_detail.css' %}">
+</head>
+<body>
+
+    <h1>Order Details</h1>
+
+    <div class="order-info">
+        <h2>Order #{{ order.id }}</h2>
+
+        <p><strong>Customer:</strong> {{ order.customer_name }}</p>
+        <p><strong>Status:</strong> {{ order.status }}</p>
+        <p><strong>Order Date:</strong> {{ order.order_date }}</p>
+    </div>
+
+    <hr>
+
+    <h2>Ordered Products</h2>
+
+    {% if order_items %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Length (cm)</th>
+                    <th>Width (cm)</th>
+                    <th>Height (cm)</th>
+                    <th>Weight (kg)</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for item in order_items %}
+                    <tr>
+                        <td>{{ item.product.name }}</td>
+                        <td>{{ item.product.length }}</td>
+                        <td>{{ item.product.width }}</td>
+                        <td>{{ item.product.height }}</td>
+                        <td>{{ item.product.weight }}</td>
+                        <td>{{ item.quantity }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No products found in this order.</p>
+    {% endif %}
+
+    <hr>
+
+    <h2>Recommended Shipping Box</h2>
+
+    {% if recommended_box %}
+
+        <div class="box-info">
+            <h3>{{ recommended_box.name }}</h3>
+
+            <p>
+                <strong>Dimensions:</strong>
+                {{ recommended_box.length }} ×
+                {{ recommended_box.width }} ×
+                {{ recommended_box.height }} cm
+            </p>
+
+            <p>
+                <strong>Maximum Weight:</strong>
+                {{ recommended_box.max_weight }} kg
+            </p>
+
+            <p>
+                <strong>Cost:</strong>
+                ₹{{ recommended_box.cost }}
+            </p>
+        </div>
+
+    {% else %}
+
+        <p>No suitable box found for this order.</p>
+
+    {% endif %}
+
+    <br>
+
+    <a href="{% url 'order_list' %}">Back to Orders</a>
+
+</body>
+</html>

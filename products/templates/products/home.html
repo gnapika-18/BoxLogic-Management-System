@@ -1,0 +1,64 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartBox | Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <h2>Box<span>Logic</span></h2>
+        <p>Warehouse Management System</p>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <h1>Welcome to BoxLogic 👋</h1>
+            <p>Manage your products, orders and shipping boxes in one place.</p>
+        </section>
+
+        
+        <h2 class="section-title">Quick Actions</h2>
+
+        <section class="actions">
+
+            <div class="action-card">
+                <h3>📦 Products</h3>
+                <p>View and manage product details, dimensions and weight.</p>
+                <a href="{% url 'product_list' %}" class="btn">
+                    View Products
+                </a>
+            </div>
+
+            <div class="action-card">
+                <h3>🛒 Orders</h3>
+                <p>Manage customer orders and view order information.</p>
+                <a href="{% url 'order_list' %}" class="btn">
+                    View Orders
+                </a>
+            </div>
+
+            <div class="action-card">
+                <h3>🚚 Shipping Boxes</h3>
+                <p>View available boxes, dimensions, weight capacity and cost.</p>
+                <a href="/admin/" class="btn">
+                    Manage Boxes
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        SmartBox © 2026 | AI-Assisted Box Selection System
+    </footer>
+
+</body>
+</html>
