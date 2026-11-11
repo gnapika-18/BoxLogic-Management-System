@@ -26,8 +26,11 @@ SECRET_KEY = 'django-insecure-94msh9q!y$^6l63lga446=69jw4e_01moxeaboff$-&i!qqahi
 # SECURITY WARNING: don't run with debug turned on in production!
 
 DEBUG = os.environ.get("DEBUG", "False") == "True"
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [
+    "boxlogic-management-system-7.onrender.com",
+    "localhost",
+    "127.0.0.1",
+]
 
 # Application definition
 
@@ -68,6 +71,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
@@ -144,3 +148,7 @@ STORAGES = {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://boxlogic-management-system-7.onrender.com",
+]
