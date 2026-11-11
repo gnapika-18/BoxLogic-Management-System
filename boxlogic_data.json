@@ -1,0 +1,189 @@
+[
+{
+  "model": "products.product",
+  "pk": 1,
+  "fields": {
+    "name": "Laptop",
+    "length": "20.00",
+    "width": "30.00",
+    "height": "5.00",
+    "weight": "2.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 2,
+  "fields": {
+    "name": "Wireless Mouse",
+    "length": "12.00",
+    "width": "7.00",
+    "height": "4.00",
+    "weight": "0.15"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 3,
+  "fields": {
+    "name": "Paperback Book",
+    "length": "21.00",
+    "width": "14.00",
+    "height": "3.00",
+    "weight": "0.40"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 4,
+  "fields": {
+    "name": "Phone Case",
+    "length": "16.00",
+    "width": "8.00",
+    "height": "1.50",
+    "weight": "0.05"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 5,
+  "fields": {
+    "name": "Coffee Mug",
+    "length": "10.00",
+    "width": "10.00",
+    "height": "11.00",
+    "weight": "0.35"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 1,
+  "fields": {
+    "customer_name": "Anusha",
+    "status": "pending",
+    "order_date": "2026-11-10T09:56:14.718Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 2,
+  "fields": {
+    "customer_name": "Gnapika",
+    "status": "pending",
+    "order_date": "2026-11-10T09:56:42.783Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 3,
+  "fields": {
+    "customer_name": "Vidya",
+    "status": "pending",
+    "order_date": "2026-11-10T17:36:45.445Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 4,
+  "fields": {
+    "customer_name": "Durga",
+    "status": "pending",
+    "order_date": "2026-11-10T17:37:02.307Z"
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 1,
+  "fields": {
+    "order": 1,
+    "product": 1,
+    "quantity": 2
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 2,
+  "fields": {
+    "order": 2,
+    "product": 2,
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 3,
+  "fields": {
+    "order": 3,
+    "product": 4,
+    "quantity": 2
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 4,
+  "fields": {
+    "order": 3,
+    "product": 5,
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.box",
+  "pk": 1,
+  "fields": {
+    "name": "Small Box",
+    "length": 20.0,
+    "width": 15.0,
+    "height": 10.0,
+    "max_weight": 2.0,
+    "cost": "15.00"
+  }
+},
+{
+  "model": "orders.box",
+  "pk": 2,
+  "fields": {
+    "name": "Medium Box",
+    "length": 30.0,
+    "width": 25.0,
+    "height": 20.0,
+    "max_weight": 5.0,
+    "cost": "25.00"
+  }
+},
+{
+  "model": "orders.box",
+  "pk": 3,
+  "fields": {
+    "name": "Large Box",
+    "length": 40.0,
+    "width": 30.0,
+    "height": 25.0,
+    "max_weight": 10.0,
+    "cost": "40.00"
+  }
+},
+{
+  "model": "orders.box",
+  "pk": 4,
+  "fields": {
+    "name": "Extra large Box",
+    "length": 50.0,
+    "width": 40.0,
+    "height": 35.0,
+    "max_weight": 20.0,
+    "cost": "60.00"
+  }
+},
+{
+  "model": "orders.box",
+  "pk": 5,
+  "fields": {
+    "name": "Laptop Box",
+    "length": 45.0,
+    "width": 35.0,
+    "height": 15.0,
+    "max_weight": 15.0,
+    "cost": "50.00"
+  }
+}
+]
